@@ -23,7 +23,6 @@ end
 gem 'jquery-rails'
 gem 'less-rails'
 gem 'therubyracer'
-gem 'heroku'
 gem 'twitter-bootstrap-rails', :git => "git://github.com/toadkicker/twitter-bootstrap-rails.git", :branch => "remove_therubyracer"
 
 # To use ActiveModel has_secure_password
