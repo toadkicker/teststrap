@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/toadkicker/twitter-bootstrap-rails.git
-  revision: 334775aac8a1dca9367ac1e90b71ba5be6659820
+  revision: cd1cfeab50f9cb7b471206767694c53b2b142736
   branch: remove_therubyracer
   specs:
-    twitter-bootstrap-rails (2.1.4)
+    twitter-bootstrap-rails (2.1.5)
       actionpack (>= 3.1)
       execjs
       railties (>= 3.1)
@@ -60,7 +60,7 @@ GEM
     json (1.7.5)
     less (2.2.2)
       commonjs (~> 0.2.6)
-    less-rails (2.2.5)
+    less-rails (2.2.6)
       actionpack (>= 3.1)
       less (~> 2.2.0)
     libv8 (3.3.10.4)
