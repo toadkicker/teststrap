@@ -3,6 +3,8 @@
 </div>
 <table class="table table-striped table-bordered">
   <tr>
+    <th>Title</th>
+    <th>Body</th>
     <th></th>
     <th></th>
     <th></th>
@@ -10,6 +12,8 @@
 
 <% @people.each do |person| %>
   <tr>
+    <td><%= person.title %></td>
+    <td><%= person.body %></td>
     <td><%= link_to 'Show', person, :class => "btn btn-success" %></td>
     <td><%= link_to 'Edit', edit_person_path(person), :class => "btn btn-warning" %></td>
     <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
