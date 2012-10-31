@@ -16,7 +16,7 @@
     <td><%= person.body %></td>
     <td><%= link_to 'Show', person, :class => "btn btn-success" %></td>
     <td><%= link_to 'Edit', edit_person_path(person), :class => "btn btn-warning" %></td>
-    <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+    <td><%= link_to 'Destroy', person, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger" %></td>
   </tr>
 <% end %>
 </table>
