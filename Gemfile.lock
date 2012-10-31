@@ -1,7 +1,6 @@
 GIT
   remote: git://github.com/toadkicker/twitter-bootstrap-rails.git
-  revision: cd1cfeab50f9cb7b471206767694c53b2b142736
-  branch: remove_therubyracer
+  revision: 61702c41347a050e25959bc4c8bf4444685bd4a6
   specs:
     twitter-bootstrap-rails (2.1.5)
       actionpack (>= 3.1)

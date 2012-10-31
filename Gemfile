@@ -22,7 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails', :git => "git://github.com/toadkicker/twitter-bootstrap-rails.git", :branch => "remove_therubyracer"
+gem 'twitter-bootstrap-rails', :git => "git://github.com/toadkicker/twitter-bootstrap-rails.git"
 gem 'formtastic'
 gem 'formtastic-bootstrap'
 
