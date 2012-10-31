@@ -13,7 +13,6 @@ gem 'pg'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'less'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -23,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'therubyracer'
+gem 'less'
 gem 'twitter-bootstrap-rails', :git => "git://github.com/toadkicker/twitter-bootstrap-rails.git", :branch => "remove_therubyracer"
 gem 'formtastic'
 gem 'formtastic-bootstrap'
