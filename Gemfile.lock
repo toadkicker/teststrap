@@ -51,6 +51,11 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
+    formtastic-bootstrap (2.0.0)
+      formtastic (~> 2.2)
+      formtastic-bootstrap
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -60,9 +65,6 @@ GEM
     json (1.7.5)
     less (2.2.2)
       commonjs (~> 0.2.6)
-    less-rails (2.2.6)
-      actionpack (>= 3.1)
-      less (~> 2.2.0)
     libv8 (3.3.10.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -123,8 +125,10 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  formtastic
+  formtastic-bootstrap
   jquery-rails
-  less-rails
+  less
   pg
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
