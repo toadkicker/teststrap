@@ -21,8 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'therubyracer'
-gem 'less'
+gem 'less-rails'
 gem 'twitter-bootstrap-rails', :git => "git://github.com/toadkicker/twitter-bootstrap-rails.git", :branch => "remove_therubyracer"
 gem 'formtastic'
 gem 'formtastic-bootstrap'
