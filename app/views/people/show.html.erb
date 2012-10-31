@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<div class="well">
+  <p><label>Title</label><%= @person.title %></p>
+  <p><label>Body</label><%= @person.body %></p>
+</div>
 
 <%= link_to 'Edit', edit_person_path(@person), :class => "btn btn-warning" %> |
 <%= link_to 'Back', people_path, :class => "btn btn-info" %>
