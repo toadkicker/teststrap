@@ -1,7 +1,13 @@
 Teststrap::Application.routes.draw do
   resources :people
 
-  # The priority is based upon order of creation:
+  match 'getting-started', :as => :getting_started, :controller => :bootstrap, :action => :getting_started
+  match 'scaffolding' => 'bootstrap#scaffolding'
+  match 'base-css', :as => :base_css, :controller => :bootstrap, :action => :base_css
+  match 'components' => 'bootstrap#components'
+  match 'javascript' => 'bootstrap#javascript'
+  match 'customize' => 'bootstrap#customize'
+    # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
@@ -50,7 +56,7 @@ Teststrap::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'people#index'
+  root :to => 'bootstrap#index'
 
   # See how all your routes lay out with "rake routes"
 
