@@ -19,7 +19,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-
+gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails', '2.1.9'
