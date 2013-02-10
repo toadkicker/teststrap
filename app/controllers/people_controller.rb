@@ -3,7 +3,7 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     @people = Person.all
-
+    flash[:notice] = "This is a flash message"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @people }
