@@ -3,7 +3,10 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     @people = Person.all
-    flash[:notice] = "This is a flash message"
+    flash[:success] = "This is a success flash message"
+    flash[:error] = "This is an error flash message"
+    flash[:warning] = "This is a warning flash message"
+    flash[:info] = "This is a info flash message"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @people }
