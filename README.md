@@ -11,7 +11,7 @@ live at http://teststrap.herokuapp.com.
 
 1) Open the gemfile and add your appropriate database adapter gem. (e.g. mysql, pg, sqlite)
 
-2) nCreate config/database.yml file. Examples are found here:
+2) Create config/database.yml file. Examples are found here:
   https://gist.github.com/961978
 
 3) Run the normal rails setup for your database
