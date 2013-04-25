@@ -2,6 +2,7 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
+    add_breadcrumb "People", people_path
     @people = Person.all
     flash[:success] = "This is a success flash message"
     flash[:error] = "This is an error flash message"
@@ -17,6 +18,8 @@ class PeopleController < ApplicationController
   # GET /people/1.json
   def show
     @person = Person.find(params[:id])
+    add_breadcrumb "People", people_path
+    add_breadcrumb @person.title, person_path(@person)
 
     respond_to do |format|
       format.html # show.html.erb
