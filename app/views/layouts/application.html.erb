@@ -74,9 +74,16 @@
         </div>
       </div>
     </div>
-
-    <%= yield %>
-
+    <div class="container">
+      <div class="row">
+      <div class="messages span9">
+        <%= bootstrap_flash %>
+      </div>
+      </div>
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
 
     <!-- Footer
     ================================================== -->
