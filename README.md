@@ -1,37 +1,21 @@
-Getting Started:
+###Twitter Bootstrap Rails Test App
 
-https://gist.github.com/961978
+This is an example rails app implementing the twitter-bootstrap-rails gem. 
+You can refer to this application for learning how to set up the gem and get
+an understanding of how to use various pieces of twitter bootstrap.
 
-$ gem install sqlite3
+There is a single resource at '/people' to demo a basic CRUD UI. The app is
+live at http://teststrap.herokuapp.com.
 
-# Gemfile
-gem 'sqlite3'
-$ bundle
+###Getting Started:
 
-Create config\database.yml
+1) Open the gemfile and add your appropriate database adapter gem. (e.g. mysql, pg, sqlite)
 
-# SQLite version 3.x
-#   gem install sqlite3
-development:
-  adapter: sqlite3
-  database: db/development.sqlite3
-  pool: 5
-  timeout: 5000
+2) nCreate config/database.yml file. Examples are found here:
+  https://gist.github.com/961978
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  adapter: sqlite3
-  database: db/test.sqlite3
-  pool: 5
-  timeout: 5000
+3) Run the normal rails setup for your database
 
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
 $ rake db:migrate
 
 $ rake db:seed
