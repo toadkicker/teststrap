@@ -37,31 +37,8 @@
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
     <!-- Navbar ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Bootstrap</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active">
-                <%= link_to "Home", root_path %>
-              </li>
-              <li class="">
-                <%= link_to "Widgets", widgets_path %>
-              </li>
-              <li class="">
-                <%= link_to "Github", "https://github.com/seyhunak/twitter-bootstrap-rails" %>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render partial: 'shared/navbar' %>
+    <!-- Content ================================================= -->
     <div id="content" class="container">
       <div class="row">
       <div class="messages span9">

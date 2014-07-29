@@ -1,6 +1,7 @@
 class WidgetsController < ApplicationController
   before_action :set_widget, only: [:show, :edit, :update, :destroy]
-
+  add_breadcrumb :index, :widgets_path
+  
   # GET /widgets
   def index
     @widgets = Widget.all
@@ -8,6 +9,7 @@ class WidgetsController < ApplicationController
 
   # GET /widgets/1
   def show
+    add_breadcrumb @widget[:cog]
   end
 
   # GET /widgets/new
@@ -17,6 +19,7 @@ class WidgetsController < ApplicationController
 
   # GET /widgets/1/edit
   def edit
+    add_breadcrumb @widget[:cog]
   end
 
   # POST /widgets
