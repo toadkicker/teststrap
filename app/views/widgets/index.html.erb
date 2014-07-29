@@ -22,8 +22,14 @@
         <td><%= widget.axle %></td>
         <td><%=l widget.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_widget_path(widget), :class => 'btn btn-default btn-xs' %>
+          <%= content_tag :button, t('.edit', :default => t("helpers.links.edit")),
+                      :class => 'btn btn-default btn-xs', :data => {toggle: 'modal', target: "#modal-#{widget.id}"} %>
+          <%= modal_dialog :id => "modal-#{widget.id}",
+            :header => { :show_close => true, :dismiss => 'modal', :title => 'Edit Widget' },
+            :body   => render(partial: 'form', locals: {widget: widget}),
+            :footer => content_tag(:button, 'Save', class: 'btn') %>
+
+
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       widget_path(widget),
                       :method => :delete,
@@ -34,7 +40,9 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_widget_path,
-            :class => 'btn btn-primary' %>
+<%= modal_dialog :id => "modal-new",
+            :header => { :show_close => true, :dismiss => 'modal', :title => 'New Widget' },
+            :body   => render(partial: 'form', locals: {widget: model_class.new}),
+            :footer => content_tag(:button, 'Save', class: 'btn') %>
+<%= content_tag :button, t('.new', :default => t("helpers.links.new")),
+                      :class => 'btn btn-default', :data => {toggle: 'modal', target: "#modal-new"} %>
