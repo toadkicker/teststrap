@@ -67,5 +67,7 @@ Teststrap::Application.configure do
 
   #Rails 4 upgrade
   config.eager_load = false
-  
+  config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  config.action_controller.asset_host = "d2mlaidxl5oocn.cloudfront.net"
+
 end
