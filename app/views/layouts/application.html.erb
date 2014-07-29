@@ -52,7 +52,7 @@
                 <%= link_to "Home", root_path %>
               </li>
               <li class="">
-                <%= link_to "People", people_path %>
+                <%= link_to "Widgets", widgets_path %>
               </li>
               <li class="">
                 <%= link_to "Github", "https://github.com/seyhunak/twitter-bootstrap-rails" %>
@@ -62,7 +62,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div id="content" class="container">
       <div class="row">
       <div class="messages span9">
         <%= bootstrap_flash %>
@@ -78,7 +78,7 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-      Teststrap is a basic rails app demo for twitter-bootstrap-rails.
+      <%= link_to 'Teststrap', 'https://github.com/toadkicker/teststrap', :target => '_blank' %> is a basic rails app demo for twitter-bootstrap-rails.
      </div>
     </footer>
 

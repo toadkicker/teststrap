@@ -1,7 +1,7 @@
 Teststrap::Application.routes.draw do
   
-  resources :people
+  resources :widgets
 
-  root :to => 'people#index'
+  root :to => 'widgets#index'
 
 end
