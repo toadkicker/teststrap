@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cog: MyString
+  gear: MyString
+  axle: MyString
+
+two:
+  cog: MyString
+  gear: MyString
+  axle: MyString

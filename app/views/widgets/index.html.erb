@@ -1,33 +1,34 @@
-<%= render_breadcrumbs %>
-<%- model_class = Person -%>
+<%- model_class = Widget -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:body) %></th>
+      <th><%= model_class.human_attribute_name(:cog) %></th>
+      <th><%= model_class.human_attribute_name(:gear) %></th>
+      <th><%= model_class.human_attribute_name(:axle) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
-    <% @people.each do |person| %>
+    <% @widgets.each do |widget| %>
       <tr>
-        <td><%= link_to person.id, person_path(person) %></td>
-        <td><%= person.title %></td>
-        <td><%= person.body %></td>
-        <td><%=l person.created_at %></td>
+        <td><%= link_to widget.id, widget_path(widget) %></td>
+        <td><%= widget.cog %></td>
+        <td><%= widget.gear %></td>
+        <td><%= widget.axle %></td>
+        <td><%=l widget.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_person_path(person), :class => 'btn btn-mini' %>
+                      edit_widget_path(widget), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      person_path(person),
+                      widget_path(widget),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
+                      :class => 'btn btn-xs btn-danger' %>
         </td>
       </tr>
     <% end %>
@@ -35,5 +36,5 @@
 </table>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_person_path,
+            new_widget_path,
             :class => 'btn btn-primary' %>
