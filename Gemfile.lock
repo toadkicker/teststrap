@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/toadkicker/twitter-bootstrap-rails
-  revision: 2cef1a4a86b9a323e1ce8597cb620127ae748807
+  revision: 3a5f4d8ed24754be39319fda87a4366d4666e18e
   branch: error_msgs
   specs:
     twitter-bootstrap-rails (3.1.1)
