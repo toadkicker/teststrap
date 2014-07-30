@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/toadkicker/twitter-bootstrap-rails
-  revision: 8f716e3b352ad5d622e2a50b805a2246d8cc1928
+  revision: 2cef1a4a86b9a323e1ce8597cb620127ae748807
   branch: error_msgs
   specs:
-    twitter-bootstrap-rails (2.2.8)
+    twitter-bootstrap-rails (3.1.1)
       actionpack (>= 3.1)
       execjs
       rails (>= 3.1)

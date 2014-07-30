@@ -19,7 +19,7 @@
         %td= widget.axle
         %td=l widget.created_at
         %td
-          = link_to t('.edit', :default => t("helpers.links.edit")), edit_widget_path(widget), :class => 'btn btn-mini'
-          = link_to t('.destroy', :default => t("helpers.links.destroy")), widget_path(widget), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_widget_path(widget), :class => 'btn btn-default btn-xs'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), widget_path(widget), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
 = link_to t('.new', :default => t("helpers.links.new")), new_widget_path, :class => 'btn btn-primary'
