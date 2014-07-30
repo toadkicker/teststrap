@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  breadcrumbs:
+    widgets:
+      index: "You are at: Widgets"
   helpers:
     actions: "Actions"
     links:
