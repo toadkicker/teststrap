@@ -1,0 +1,19 @@
+= form_for @widget, html: { class: "form #{form_class ||= 'form-horizontal'}" } do |f|
+  .control-group{class: "#{group_class ||= ''}"}
+    = f.label :cog, class: "control-label #{label_class ||= ''}"
+    .controls{class: "#{controls_class  ||= ''}"}
+      = f.text_field :cog, class: 'text_field', required: true
+    = error_span(@widget[:cog])
+  .control-group{class: "#{group_class ||= ''}"}
+    = f.label :gear, class: "control-label #{label_class ||= ''}"
+    .controls{class: "#{controls_class ||= ''}"}
+      = f.text_field :gear, class: 'text_field', required: true
+    = error_span(@widget[:gear])
+  .control-group{class: "#{group_class ||= ''}"}
+    = f.label :axle, class: "control-label #{label_class ||= ''}"
+    .controls{class: "#{controls_class ||= ''}"}
+      = f.text_field :axle, class: 'text_field', required: true
+    = error_span(@widget[:axle])
+  .form-actions{class: "#{actions_class ||= ''}"}
+    = f.submit nil, class: "btn #{button_class ||= 'btn-primary'}"
+    = link_to t('.cancel', default: t("helpers.links.cancel")), widgets_path, class: "btn #{cancel_btn_class ||= 'btn-default'}"

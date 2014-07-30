@@ -11,6 +11,7 @@ gem 'unicorn'
 # in production environments by default.
 gem 'sass-rails',   '~> 4.0'
 gem 'coffee-rails', '~> 4.0'
+gem 'haml-rails'
 gem 'less'
 gem 'commonjs'
 gem 'therubyracer', :platforms => :ruby
@@ -20,9 +21,8 @@ gem 'uglifier', '>= 1.0.3'
 gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails', :branch => 'bootstrap3'
-gem 'formtastic'
-gem 'formtastic-bootstrap'
+gem 'twitter-bootstrap-rails', :git => 'https://github.com/toadkicker/twitter-bootstrap-rails', :branch => 'error_msgs'
+gem 'erb2haml'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
