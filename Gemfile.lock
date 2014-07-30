@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/toadkicker/twitter-bootstrap-rails
-  revision: 3a5f4d8ed24754be39319fda87a4366d4666e18e
+  revision: aae4d459f44cc8589bf4f23f4be70f37add8a7c3
   branch: error_msgs
   specs:
     twitter-bootstrap-rails (3.1.1)
@@ -87,6 +87,8 @@ GEM
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
+    rack-cache (1.2)
+      rack (>= 0.4)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.4)
@@ -157,6 +159,7 @@ DEPENDENCIES
   less-rails
   libv8 (~> 3.11.8)
   pg
+  rack-cache
   rails (~> 4.0)
   sass-rails (~> 4.0)
   therubyracer

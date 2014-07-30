@@ -16,7 +16,7 @@ gem 'less'
 gem 'commonjs'
 gem 'therubyracer', :platforms => :ruby
 gem 'uglifier', '>= 1.0.3'
-
+gem 'rack-cache'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
