@@ -1,0 +1,6 @@
+{
+  "name": "Bootstrap 3 + Rails",
+  "description": "A barebones Rails 4 / Bootstrap 3 app",
+  "repository": "https://github.com/toadkicker/teststrap",
+  "keywords": ["rails", "bootstrap", "twitter"]
+}

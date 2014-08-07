@@ -1,4 +1,6 @@
 ###Twitter Bootstrap Rails Test App
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 
 This is an example rails app implementing the twitter-bootstrap-rails gem. 
 You can refer to this application for learning how to set up the gem and get
