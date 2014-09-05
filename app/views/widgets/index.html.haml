@@ -25,3 +25,18 @@
               = link_to t('.destroy', :default => t("helpers.links.destroy")), widget_path(widget), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
 
     = link_to t('.new', :default => t("helpers.links.new")), new_widget_path, :class => 'btn btn-primary'
+.col-md-10
+  .row
+    %br
+    .panel.panel-primary
+      .panel-heading
+        %span I'm a panel
+      .panel-body
+        %p
+          Secret to life, creation, and all things is
+          %span{class:"badge"} 42
+        = content_tag :a, "Modal Example", :href => "#modal", :class => 'btn btn-default', :data => {:toggle => 'modal'}
+        = modal_dialog :id => "modal",                                                       |
+          :header => { :show_close => true, :dismiss => 'modal', :title => 'Modal header' }, |
+          :body => { :content => 'This is the body' },                                       |
+          :footer => { :content => content_tag(:button, 'Neat! Bye!', :class => 'btn btn-primary', :data => { :dismiss => 'modal' }) }           |
