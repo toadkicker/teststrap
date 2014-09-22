@@ -19,19 +19,19 @@
 
 
   %body
-    .navbar.navbar-default.navbar-static-top
-      .container
-        %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        %a.navbar-brand(href="#") Teststrap
-        .navbar-collapse.collapse.navbar-responsive-collapse
-          %ul.nav.navbar-nav
-            %li= link_to "Link 1", "/path1"
-            %li= link_to "Link 2", "/path2"
-            %li= link_to "Link 3", "/path3"
-            %li= link_to "Link 3", "/path3"
+    = nav_bar fixed: :top, brand: 'twitter-bootstrap-rails v 3.2.1', :responsive => true do
+      = menu_group do
+        = menu_item 'Home', root_path
+        = menu_divider
+        = drop_down 'Widgets' do
+          = menu_item 'Things you can\'t afford', root_path
+          = menu_item 'Things that won\'t suit you anyway', root_path
+          = menu_item 'Things you\'re not even cool enough to buy anyway', root_path
+        = menu_item 'Github Repo', 'https://github.com/seyhunak/twitter-bootstrap-rails'
+        = menu_item 'Wiki', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki'
+      = menu_group :pull => :right do
+        .form-group
+          = menu_item 'Log Out', root_path, class: 'btn btn-primary btn-sm', method: :delete
 
     .container
       .row
@@ -43,8 +43,8 @@
             %h3 Sidebar
             %ul.nav.nav-list
               %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to 'Link 1', '/path1'
+              %li= link_to 'Link 2', '/path2'
+              %li= link_to 'Link 3', '/path3'
       %footer
         %p &copy; Company 2014
