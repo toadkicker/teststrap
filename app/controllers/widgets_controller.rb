@@ -5,6 +5,7 @@ class WidgetsController < ApplicationController
   # GET /widgets
   def index
     @widgets = Widget.all
+    flash[:success] = 'Welcome to Teststrap. An example Rails 4.1.6 application using twitter-bootstrap-rails'
   end
 
   # GET /widgets/1
