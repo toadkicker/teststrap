@@ -19,20 +19,20 @@
 
 
   %body
-    = nav_bar fixed: :top, brand: 'twitter-bootstrap-rails v 3.2.1', :responsive => true do
-      = menu_group do
-        = menu_item 'Home', root_path
-        = menu_divider
-        = drop_down 'Widgets' do
-          = menu_item 'Things you can\'t afford', root_path
-          = menu_item 'Things that won\'t suit you anyway', root_path
-          = menu_item 'Things you\'re not even cool enough to buy anyway', root_path
-        = menu_item 'Github Repo', 'https://github.com/seyhunak/twitter-bootstrap-rails'
-        = menu_item 'Wiki', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki'
-      = menu_group :pull => :right do
-        .form-group
-          = menu_item 'Log Out', root_path, class: 'btn btn-primary btn-sm', method: :delete
-
+    .container-fluid
+      = nav_bar fixed: :top, brand: 'twitter-bootstrap-rails v 3.2.1', :responsive => true do
+        = menu_group do
+          = menu_item 'Home', root_path
+          = menu_divider
+          = drop_down 'Widgets' do
+            = menu_item 'All Widgets', widgets_path
+            = menu_item 'New Widget', new_widget_path
+          = menu_item icon(:github) + ' Github Repo', 'https://github.com/seyhunak/twitter-bootstrap-rails'
+          = menu_item 'Wiki', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki'
+        = menu_group :pull => :right do
+          .form-group
+            = menu_item 'Log Out', root_path, class: 'btn btn-primary btn-sm', method: :delete
+    %div{style: "padding-top: 60px"}
     .container
       .row
         .col-lg-9
