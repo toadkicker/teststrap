@@ -37,6 +37,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.7)
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -46,6 +47,12 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     commonjs (0.2.7)
+    devise (3.3.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
@@ -81,6 +88,7 @@ GEM
     mime-types (2.3)
     minitest (5.4.1)
     multi_json (1.10.1)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     rack (1.5.2)
     rack-cache (1.2)
@@ -138,6 +146,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -145,6 +155,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0)
   commonjs
+  devise
   erb2haml
   haml-rails
   jquery-rails

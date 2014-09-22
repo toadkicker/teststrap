@@ -24,6 +24,8 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails', :git => 'https://github.com/toadkicker/twitter-bootstrap-rails', :branch => 'feature/welcome_bower_issue_798'
 gem 'erb2haml'
 
+gem 'devise'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
