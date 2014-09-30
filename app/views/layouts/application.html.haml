@@ -23,15 +23,25 @@
       = nav_bar fixed: :top, brand: 'twitter-bootstrap-rails v 3.2.1', :responsive => true do
         = menu_group do
           = menu_item 'Home', root_path
+          = drop_down 'Helpers' do
+            = menu_item 'Breadcrumbs', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Breadcrumbs-Helper'
+            = menu_item 'Flash Messages', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Flash-messages-helper'
+            = menu_item 'Icons', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Bages,-Labels,-Fontawesome,-and-Glyphicons'
+            = menu_item 'Navbars', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Navbar-Helper'
+            = menu_item 'Modals', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Modal-Helper'
           = menu_divider
           = drop_down 'Widgets' do
             = menu_item 'All Widgets', widgets_path
             = menu_item 'New Widget', new_widget_path
           = menu_item icon(:github) + ' Github Repo', 'https://github.com/seyhunak/twitter-bootstrap-rails'
           = menu_item 'Wiki', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki'
-        = menu_group :pull => :right do
-          .form-group
-            = menu_item 'Log Out', destroy_user_session_path, class: 'btn btn-primary btn-sm', method: :delete
+          - if !user_signed_in?
+            = menu_item "Sign In", new_user_session_path, pull: :right
+          - if user_signed_in?
+            = menu_group :pull => :right do
+              = drop_down "#{current_user.full_name}" do
+                = menu_item icon(:sign_out) + 'Sign out', destroy_user_session_path, method: :delete
+
     %div{style: "padding-top: 60px"}
     .container
       .row
@@ -39,8 +49,8 @@
           = bootstrap_flash
           = yield
         .col-lg-3
+          %h3 Sidebar Example
           .well.sidebar-nav
-            %h3 Sidebar
             %ul.nav.nav-list
               %li.nav-header Sidebar
               %li= link_to 'Link 1', '/path1'

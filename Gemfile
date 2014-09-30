@@ -21,10 +21,16 @@ gem 'rack-cache'
 gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails', :git => 'https://github.com/toadkicker/twitter-bootstrap-rails', :branch => 'feature/welcome_bower_issue_798'
+gem 'twitter-bootstrap-rails', path: '/home/toadkicker/Projects/gitviews/twitter-bootstrap-rails'
+# gem 'twitter-bootstrap-rails', :git => 'https://github.com/toadkicker/twitter-bootstrap-rails', :branch => 'feature/welcome_bower_issue_798'
 gem 'erb2haml'
 
 gem 'devise'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
