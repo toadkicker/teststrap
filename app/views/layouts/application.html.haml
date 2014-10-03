@@ -20,21 +20,21 @@
 
   %body
     .container-fluid
-      = nav_bar fixed: :top, brand: 'twitter-bootstrap-rails v 3.2.1', :responsive => true do
+      = nav_bar fixed: :top, brand: 'railsstrap v 3.2.0.1', :responsive => true do
         = menu_group do
           = menu_item 'Home', root_path
           = drop_down 'Helpers' do
-            = menu_item 'Breadcrumbs', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Breadcrumbs-Helper'
-            = menu_item 'Flash Messages', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Flash-messages-helper'
-            = menu_item 'Icons', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Bages,-Labels,-Fontawesome,-and-Glyphicons'
-            = menu_item 'Navbars', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Navbar-Helper'
-            = menu_item 'Modals', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki/Modal-Helper'
+            = menu_item 'Breadcrumbs', 'https://github.com/toadkicker/railsstrap/wiki/Breadcrumbs-Helper'
+            = menu_item 'Flash Messages', 'https://github.com/toadkicker/railsstrap/wiki/Flash-messages-helper'
+            = menu_item 'Icons', 'https://github.com/toadkicker/railsstrap/wiki/Bages,-Labels,-Fontawesome,-and-Glyphicons'
+            = menu_item 'Navbars', 'https://github.com/toadkicker/railsstrap/wiki/Navbar-Helper'
+            = menu_item 'Modals', 'https://github.com/toadkicker/railsstrap/wiki/Modal-Helper'
           = menu_divider
           = drop_down 'Widgets' do
             = menu_item 'All Widgets', widgets_path
             = menu_item 'New Widget', new_widget_path
-          = menu_item icon(:github) + ' Github Repo', 'https://github.com/seyhunak/twitter-bootstrap-rails'
-          = menu_item 'Wiki', 'https://github.com/seyhunak/twitter-bootstrap-rails/wiki'
+          = menu_item icon(:github) + ' Github Repo', 'https://github.com/toadkicker/railsstrap'
+          = menu_item 'Wiki', 'https://github.com/toadkicker/railsstrap/wiki'
           - if !user_signed_in?
             = menu_item "Sign In", new_user_session_path, pull: :right
           - if user_signed_in?
