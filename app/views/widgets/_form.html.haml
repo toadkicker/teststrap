@@ -4,17 +4,17 @@
       = f.label :cog, class: 'control-label'
       .controls
         = f.text_field :cog, class: 'form-control', required: true
-      = error_span(@widget[:cog])
+      = error_span(:cog)
     .form-group
       = f.label :gear, class: 'control-label'
       .controls
         = f.text_field :gear, class: 'form-control', required: true
-      = error_span(@widget[:gear])
+      = error_span :gear
     .form-group
       = f.label :axle, class: 'control-label'
       .controls
         = f.text_field :axle, class: 'form-control', required: true
-      = error_span(@widget[:axle])
+      = error_span :axle
     .form-group
       = f.submit nil,class: 'btn btn-primary'
       = link_to t('.cancel', :default => t("helpers.links.cancel")), widgets_path, :class => 'btn btn-default'

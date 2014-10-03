@@ -19,32 +19,42 @@
 
 
   %body
-    .navbar.navbar-default.navbar-static-top
-      .container
-        %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        %a.navbar-brand(href="#") Teststrap
-        .navbar-collapse.collapse.navbar-responsive-collapse
-          %ul.nav.navbar-nav
-            %li= link_to "Link 1", "/path1"
-            %li= link_to "Link 2", "/path2"
-            %li= link_to "Link 3", "/path3"
-            %li= link_to "Link 3", "/path3"
+    .container-fluid
+      = nav_bar fixed: :top, brand: 'railsstrap v 3.2.0.1', :responsive => true do
+        = menu_group do
+          = menu_item 'Home', root_path
+          = drop_down 'Helpers' do
+            = menu_item 'Breadcrumbs', 'https://github.com/toadkicker/railsstrap/wiki/Breadcrumbs-Helper'
+            = menu_item 'Flash Messages', 'https://github.com/toadkicker/railsstrap/wiki/Flash-messages-helper'
+            = menu_item 'Icons', 'https://github.com/toadkicker/railsstrap/wiki/Bages,-Labels,-Fontawesome,-and-Glyphicons'
+            = menu_item 'Navbars', 'https://github.com/toadkicker/railsstrap/wiki/Navbar-Helper'
+            = menu_item 'Modals', 'https://github.com/toadkicker/railsstrap/wiki/Modal-Helper'
+          = menu_divider
+          = drop_down 'Widgets' do
+            = menu_item 'All Widgets', widgets_path
+            = menu_item 'New Widget', new_widget_path
+          = menu_item icon(:github) + ' Github Repo', 'https://github.com/toadkicker/railsstrap'
+          = menu_item 'Wiki', 'https://github.com/toadkicker/railsstrap/wiki'
+          - if !user_signed_in?
+            = menu_item "Sign In", new_user_session_path, pull: :right
+          - if user_signed_in?
+            = menu_group :pull => :right do
+              = drop_down "#{current_user.full_name}" do
+                = menu_item icon(:sign_out) + 'Sign out', destroy_user_session_path, method: :delete
 
+    %div{style: "padding-top: 60px"}
     .container
       .row
         .col-lg-9
           = bootstrap_flash
           = yield
         .col-lg-3
+          %h3 Sidebar Example
           .well.sidebar-nav
-            %h3 Sidebar
             %ul.nav.nav-list
               %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to 'Link 1', '/path1'
+              %li= link_to 'Link 2', '/path2'
+              %li= link_to 'Link 3', '/path3'
       %footer
         %p &copy; Company 2014

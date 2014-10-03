@@ -21,8 +21,15 @@ gem 'rack-cache'
 gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
 gem 'less-rails'
-gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-bootstrap-rails', :branch => 'master'
+gem 'railsstrap'
 gem 'erb2haml'
+
+gem 'devise'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
