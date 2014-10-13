@@ -1,5 +1,7 @@
-PATH
-  remote: /home/toadkicker/Projects/gitviews/railsstrap
+GIT
+  remote: https://github.com/toadkicker/railsstrap
+  revision: fd1511c407ea67a071c7210884900aab453ffd29
+  branch: develop
   specs:
     railsstrap (3.2.0.2)
       actionpack (>= 3.1)
