@@ -21,7 +21,7 @@ gem 'rack-cache'
 gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
 gem 'less-rails'
-gem 'railsstrap'
+gem 'railsstrap', git: 'https://github.com/toadkicker/railsstrap', branch: 'develop' #path: '/home/toadkicker/Projects/gitviews/railsstrap'
 gem 'erb2haml'
 
 gem 'devise'
