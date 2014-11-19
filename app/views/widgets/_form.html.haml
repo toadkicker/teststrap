@@ -16,7 +16,9 @@
         = f.text_field :axle, class: 'form-control', required: true
       = error_span :axle
     .form-group
-      = date_picker
+      = f.label :datepicker, class: 'control-label'
+      .controls
+        = date_picker
     .form-group
       = f.submit nil,class: 'btn btn-primary'
       = link_to t('.cancel', :default => t("helpers.links.cancel")), widgets_path, :class => 'btn btn-default'
