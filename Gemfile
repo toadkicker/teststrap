@@ -21,7 +21,7 @@ gem 'rack-cache'
 gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
 gem 'less-rails'
-gem 'railsstrap', git: 'https://github.com/toadkicker/railsstrap', branch: 'develop'
+gem 'railsstrap', github: 'toadkicker/railsstrap', branch: 'develop'
 
 gem 'devise'
 
@@ -33,7 +33,6 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'rails_serve_static_assets'
 end
 
 # To use ActiveModel has_secure_password

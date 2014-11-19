@@ -17,10 +17,9 @@
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
     = javascript_include_tag "application"
 
-
   %body
     .container-fluid
-      = nav_bar fixed: :top, brand: 'railsstrap v 3.3.0', :responsive => true do
+      = nav_bar fixed: :top, brand: "railsstrap #{Railsstrap::Constants::VERSION}", :responsive => true do
         = menu_group do
           = menu_item 'Home', root_path
           = drop_down 'Helpers' do
