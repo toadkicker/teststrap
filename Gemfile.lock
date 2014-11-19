@@ -1,12 +1,11 @@
 GIT
   remote: https://github.com/toadkicker/railsstrap
-  revision: a0eb4bde2c7094e1822bce38ad7e598bfca7d1b7
+  revision: 1c61224ff79ac6c09da18fc79bc4e0a63b8e025f
   branch: develop
   specs:
     railsstrap (3.3.0)
       actionpack (>= 3.1)
       less-rails (>= 2.5.0)
-      rails (>= 3.1)
       therubyracer
 
 GEM
