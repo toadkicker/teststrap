@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap/dist/js/bootstrap
+// Date and Time Picker (add the = after //):
+//= require datepicker/datepicker
 //= require_tree .

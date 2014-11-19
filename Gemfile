@@ -9,7 +9,7 @@ gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'sass-rails',   '~> 4.0'
+gem 'sass-rails',   '~> 4.0' #Pick either SASS or LESS...
 gem 'coffee-rails', '~> 4.0'
 gem 'haml-rails'
 gem 'less'
@@ -21,14 +21,19 @@ gem 'rack-cache'
 gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
 gem 'less-rails'
-gem 'railsstrap', git: 'https://github.com/toadkicker/railsstrap', branch: 'develop' #path: '/home/toadkicker/Projects/gitviews/railsstrap'
-gem 'erb2haml'
+gem 'railsstrap', path: '/home/toadkicker/Projects/gitviews/railsstrap' #git: 'https://github.com/toadkicker/railsstrap', branch: 'develop'
 
 gem 'devise'
 
 group :development do
+  gem 'erb2haml'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'rails_serve_static_assets'
 end
 
 # To use ActiveModel has_secure_password
