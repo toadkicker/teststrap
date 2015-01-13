@@ -5,7 +5,7 @@ class WidgetsController < ApplicationController
   # GET /widgets
   def index
     @widgets = Widget.all
-    flash[:success] = "Welcome to Teststrap. An example Rails #{Rails.version} application using railsstrap"
+    flash[:success] = "Welcome to Teststrap. An example Rails #{Rails.version} application using railsstrap #{Railsstrap::Constants::VERSION}"
   end
 
   # GET /widgets/1
