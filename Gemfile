@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.5'
 
 gem 'rails', '~>4.0'
 
@@ -18,10 +18,10 @@ gem 'therubyracer', :platforms => :ruby
 gem 'uglifier', '>= 1.0.3'
 gem 'rack-cache'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'libv8', '~> 3.11.8'
+gem 'libv8'
 gem 'jquery-rails'
 gem 'less-rails'
-gem 'railsstrap', github: 'toadkicker/railsstrap', branch: 'develop'
+gem 'railsstrap'
 
 gem 'devise'
 
