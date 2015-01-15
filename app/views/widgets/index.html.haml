@@ -35,8 +35,15 @@
         %p
           Secret to life, creation, and all things is
           %span{class:"badge"} 42
+        = content_tag :a, "Aside Example", :href => "#aside", :class => 'btn btn-default', :data => {:toggle => 'modal', :target => '#aside'}
         = content_tag :a, "Modal Example", :href => "#modal", :class => 'btn btn-default', :data => {:toggle => 'modal'}
-        = modal_dialog :id => "modal",                                                       |
-          :header => { :show_close => true, :dismiss => 'modal', :title => 'Modal header' }, |
-          :body => { :content => 'This is the body' },                                       |
-          :footer => { :content => content_tag(:button, 'Neat! Bye!', :class => 'btn btn-primary', :data => { :dismiss => 'modal' }) }           |
+
+= modal_dialog :id => "modal", :class => 'center',                                   |
+  :header => { :show_close => true, :dismiss => 'modal', :title => 'Modal header' }, |
+  :body => { :content => 'This is a centered modal. Try resizing the window!' },     |
+  :footer => { :content => content_tag(:button, 'Neat! Bye!', :class => 'btn btn-primary', :data => { :dismiss => 'modal' }) }
+
+= aside_dialog :id => "aside", :class => 'right',                                     |
+  :header => { :show_close => true, :dismiss => 'modal', :title => 'Aside header' }, |
+  :body => { :content => 'This is an aside modal. Try resizing the window!' },       |
+  :footer => { :content => content_tag(:button, 'Neat! Bye!', :class => 'btn btn-primary', :data => { :dismiss => 'modal', :target => '#aside' }) }
