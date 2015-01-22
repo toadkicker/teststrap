@@ -56,6 +56,10 @@
               %li= link_to 'Link 1', '/path1'
               %li= link_to 'Link 2', '/path2'
               %li= link_to 'Link 3', '/path3'
-      %footer
-        %p &copy; Company 2014
+      .row
+        %footer
+          %p
+            = link_to 'Built with Railsstrap', 'https://github.com/toadkicker/railsstrap', target: 'blank'
+            &copy;
+            = Time.now.year
     = date_picker_javascript()

@@ -40,3 +40,10 @@
           :header => { :show_close => true, :dismiss => 'modal', :title => 'Modal header' }, |
           :body => { :content => 'This is the body' },                                       |
           :footer => { :content => content_tag(:button, 'Neat! Bye!', :class => 'btn btn-primary', :data => { :dismiss => 'modal' }) }           |
+.col-md-10
+  .row
+    %h3 Glyphicons
+    %p
+      = link_to '#', class: 'btn btn-warning' do
+        Edit
+        = glyph(:pencil)
