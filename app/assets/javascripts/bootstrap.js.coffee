@@ -1,7 +1,6 @@
 jQuery ->
   $("a[rel~=popover], .has-popover").popover()
   $("a[rel~=tooltip], .has-tooltip").tooltip()
-  $('[data-toggle="tooltip"]').tooltip()
 
 
 #  # comment this out if you want to add the animation to an element. You may need to handle events for them to work correctly.

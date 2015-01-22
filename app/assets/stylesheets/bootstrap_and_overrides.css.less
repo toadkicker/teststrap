@@ -1,53 +1,42 @@
-@import "bootstrap/less/bootstrap";
-// Glyphicons - included by default in bootstrap.
-// You may need to customize config/initializers/assets.rb (Rails 4), or config/environments/[env].rb to add font paths in.
-// In either case of FontAwesome or Glyphicons, the railsstrap:install task should insert the appropriate entries for you.
-@icon-font-path: "bootstrap/fonts/";
+/*
+ Bootstrap
+ This line imports bootstrap, modified to use glyphicons from Cloudflare CDN.
+*/
+@import "bootstrap";
 
-@font-face {
-    font-family: 'Glyphicons Halflings';
-    src: font-url('@{icon-font-path}@{icon-font-name}.eot');
-    src: font-url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
-    font-url('@{icon-font-path}@{icon-font-name}.woff') format('woff'),
-    font-url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
-    font-url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg');
-}
+/*
+ Glyphicons - included by default in bootstrap.
+ If for any reason you prefer to have them as part of the asset pipeline, uncomment this.
+ If you choose to use this, open config/initializers/assets.rb (rails 4) and add this line:
+ Rails.application.config.assets.precompile += %w( *.eot *.woff *.ttf *.svg )
+*/
 
-/* FontAwesome Path
- * -------------------------- */
-@import 'fontawesome';
-@fa-font-path: 'fontawesome/fonts/';
+@import "glyphicons";
 
-@font-face {
-    font-family: 'FontAwesome';
-    src: font-url('@{fa-font-path}/fontawesome-webfont.eot?v=@{fa-version}');
-    src: font-url('@{fa-font-path}/fontawesome-webfont.eot?#iefix&v=@{fa-version}') format('embedded-opentype'),
-    font-url('@{fa-font-path}/fontawesome-webfont.woff?v=@{fa-version}') format('woff'),
-    font-url('@{fa-font-path}/fontawesome-webfont.ttf?v=@{fa-version}') format('truetype'),
-    font-url('@{fa-font-path}/fontawesome-webfont.svg?v=@{fa-version}#fontawesomeregular') format('svg');
-    //  src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
-    font-weight: normal;
-    font-style: normal;
-}
+/*
+  FontAwesome is hosted via CDN as well. If you prefer to have them included in the asset
+  pipeline, comment this out and see the next section.
+*/
+//@import 'fontawesome';
 
-//If you want exotic placement features, animations, and more, import this
+/*
+ Font Awesome
+ If for some reason you want fontawesome as part of the asset pipeline, comment out
+ the above refererence and uncomment the following lines. If you choose to use this, open
+ config/initializers/assets.rb (rails 4) and add this line:
+ Rails.application.config.assets.precompile += %w( *.eot *.woff *.ttf *.svg )
+*/
+
+@import 'fontawesome-local';
+
+//If you want exotic placement features, animations, and more, import this:
 @import "railsstrap";
 
-// Your custom LESS stylesheets goes here
-//
-// Since railsstrap was imported above you have access to its mixins which
-// you may use and inherit here, ex:
-// @import "bootstrap/less/mixins/alerts.less;
-//
-// If you'd like to override railsstrap's own variables, you can do so here as well
-// See http://bootstrap.github.com/bootstrap/customize.html#variables for their names and documentation
-//
-// Example:
-// @import (reference) 'bootstrap/less/variables.less';
-// @link-color: #ff0000;
-//
-// Date and Time Picker
-//
-// To enable the date and time picker, uncomment this line:
-// @import "datepicker/datepicker.less";
-// Don't forget to include the javascript library as well.
+/*
+ Date and Time Picker (https://github.com/toadkicker/railsstrap/wiki/Date-and-Time-Picker)
+ To enable the date and time picker, uncomment this line:
+ Don't forget to include the javascript library as well.
+*/
+
+//@import "datepicker/datepicker.less";
+
