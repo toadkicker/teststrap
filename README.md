@@ -1,5 +1,5 @@
 # Notice
-This project will be deprecated on September 1st 2015 unless people scream to keep it. The repo will always exist but I personally will not continue using it for testing. Instead, I will be moving toward having an example application integrated in the [railsstrap](/toadkicker/railsstrap) project. Future testing and examples will live there.
+This project will be deprecated on September 1st 2015 unless people scream to keep it. The repo will always exist but I personally will not continue using it for testing. Instead, I will be moving toward having an example application integrated in the [railsstrap](https://github.com/toadkicker/railsstrap) project. Future testing and examples will live there.
 
 ##Twitter Bootstrap Rails Test App
 
